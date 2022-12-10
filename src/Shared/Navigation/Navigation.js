@@ -1,8 +1,11 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import useFirebase from "../../Hooks/useFirebase";
 
 const Navigation = () => {
+  const { user, gooleSignIn, googleSignOut } = useAuth();
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -18,7 +21,11 @@ const Navigation = () => {
             >
               Add Students
             </NavLink>
-            <Button>Sign In</Button>
+            <NavLink to="/" className="text-decoration-none pt-1 px-3 fs-5">
+              {user?.displayName}
+            </NavLink>
+            <Button onClick={gooleSignIn}>Sign In</Button>
+            {/* <Button onClick={googleSignOut}>Sign Out</Button> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
