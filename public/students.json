@@ -1,1 +1,9 @@
-[{}]
+[
+  {
+    "studentID": "",
+    "studentName": "",
+    "studentEmail": "",
+    "studentGroup": "",
+    "studentAttendance": ""
+  }
+]
