@@ -5,6 +5,7 @@ import Students from "./Students/Students";
 import Navigation from "./Shared/Navigation/Navigation";
 import AddStudents from "./AddStudents/AddStudents";
 import AuthProvider from "./Context/AuthProvider";
+import Dashboard from "./Dashboard/Dashboard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Students />} />
             <Route path="/addStudents" element={<AddStudents />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
